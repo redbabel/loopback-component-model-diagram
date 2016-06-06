@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Model diagram</title>
+  </head>
+  <body>
+    <h1>Model diagram</h1>
+
+    <canvas id="target-canvas"></canvas>
+
+    <script src="./scripts/lodash.min.js"></script>
+    <script src="./scripts/dagre.min.js"></script>
+    <script src="./scripts/nomnoml.js"></script>
+    <script>
+      (function() {
+        function getSource(cb) {
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (xhttp.readyState == 4 && xhttp.status == 200) {
+              cb(xhttp.responseText);
+            }
+          };
+
+          var url = 'source/';
+          var location = window.location.href;
+
+          if (location.split('?')[1]) {
+            url += '?' + location.split('?')[1];
+          }
+
+          xhttp.open('GET', url, true);
+          xhttp.send();
+        }
+
+        var canvas = document.getElementById('target-canvas');
+
+        getSource(function (source) {
+          nomnoml.draw(canvas, source);
+        });
+      })();
+    </script>
+  </body>
+</html>

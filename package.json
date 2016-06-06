@@ -34,7 +34,9 @@
       "mocha": true
     },
     "rules": {
-      "no-console": ["off"],
+      "no-console": [
+        "off"
+      ],
       "strict": 0
     }
   },
@@ -43,5 +45,9 @@
     "prepublish": "gulp prepublish",
     "test": "gulp"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "lodash": "^4.13.1",
+    "nomnoml": "0.0.4"
+  }
 }
