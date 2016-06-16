@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Documentation - Model diagram</title>
+  </head>
+  <body>
+    <h1>Documentation</h1>
+
+    <h2>Options</h2>
+    <p>You can specify some options in the query string:</p>
+    <ul>
+      <li><code>properties</code>: if <code>false</code>, it hides the properties of each node</li>
+      <li><code>exclude</code>: it hides the specified nodes and the relations connected with them (e.g. <code>exclude=User,defensible,SoldierLink)</code></li>
+      <li>any <a href="https://github.com/skanaar/nomnoml/#directives">directive</a> of <a href="http://www.nomnoml.com/">nomnoml</a>.</li>
+    </ul>
+
+    <h2>Download source and image</h2>
+    <p>You can download the source code of the diagram as text file by using the link in the index page. It reflects the filters applied in the URL. Note that if you go to the <code><a href="source">/source</a> URI, you get the source code without any filters.</code></p>
+    <p>You can download the diagram as image by right clicking on the canvas and selecting the appropriate option.</p>
+
+    <h2>Relations</h2>
+    <p>The relations between the models are represented as follows.</p>
+    <h3>One-to-one</h3>
+    <p>A one-to-one relation can be enstablished with a <code>hasOne</code> relation. For instance, a supplier has one account, and an account can belongs to a supplier. If the <code>belongsTo</code> relation from the account to the supplier is defined, it is considered as a logical reflection of the <code>hasOne</code>, then it is discarded.</p>
+    <img src="images/has-one.png" alt="One-to-one relation">
+    <h3>One-to-many</h3>
+    <p>A one-to-many relation can be enstablished with a <code>hasMany</code> or a <code>belongsTo</code> relation. For instance, a customer has many order, and an order can belongs to a customer. If the <code>belongsTo</code> relation from the order to the customer is defined and there is a <code>hasMany</code> relation, then it is considered as a logical reflectoin of the <code>hasMany</code>, then it is discarded. But, there is no <code>hasMany</code> invers relation, then it is considered and it is drawn like his plural reflection. In practice, this means that the <code>hasMany</code> and the <code>belongsTo</code> (with no invers <code>hasOne</code>) are diplayed in the same way.</p>
+    <img src="images/has-many.png" alt="One-to-many relation">
+    <h3>Many-to-many</h3>
+    <p>A many-to-many relation can be enstablished with a <code>hasAndBelongsToMany</code> or a <code>hasManyThrough</code> relation. For instance, a doctor has and belongs to many patients and vice versa.</p>
+    <img src="images/has-and-belongs-to-many.png" alt="Many-to-many relation without a through model">
+    <p>In the same way, a doctor and a patient can be linked by the appointment, that is the "through" model.</p>
+    <img src="images/has-many-through.png" alt="Many-to-many relation with a through model">
+    <h3>Polymorphics</h3>
+    <p></p>
+    <img src="images/p-has-and-belongs-to-many.png" alt="Has and belongs to many polymorphic relation">
+    <img src="images/p-has-many.png" alt="Has many polymorphic relation">
+    <img src="images/p-has-one.png" alt="Has one polymorphic relation">
+  </body>
+</html>
