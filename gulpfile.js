@@ -10,7 +10,7 @@ const nsp = require('gulp-nsp');
 const plumber = require('gulp-plumber');
 
 gulp.task('static', () => {
-  gulp.src(['**/*.js', '!lib/public/scripts/dagre.min.js', '!lib/public/scripts/lodash.min.js'])
+  gulp.src(['**/*.js', '!lib/public/scripts/*.js'])
     .pipe(excludeGitignore())
     .pipe(eslint())
     .pipe(eslint.format())
