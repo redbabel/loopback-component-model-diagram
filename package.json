@@ -1,6 +1,6 @@
 {
   "name": "loopback-component-model-diagram",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Generate a diagram of your loopback models",
   "homepage": "https://github.com/redbabel/loopback-component-model-diagram",
   "files": [
@@ -45,7 +45,7 @@
     "prepublish": "gulp prepublish",
     "test": "gulp"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "lodash": "^4.13.1"
   }
