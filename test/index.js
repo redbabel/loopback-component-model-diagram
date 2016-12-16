@@ -1,7 +1,6 @@
-'use strict';
-
 const assert = require('assert');
-const loopbackComponentModelDiagram = require('../lib');
+
+// const loopbackComponentModelDiagram = require('../lib');
 
 describe('loopback-component-model-diagram', () => {
   it('should have unit test!', () => {

@@ -1,4 +1,4 @@
-'use strict';
+/* eslint-disable import/no-extraneous-dependencies */
 
 const path = require('path');
 const gulp = require('gulp');
