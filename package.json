@@ -20,20 +20,10 @@
     "eslint-plugin-import": "2.2.0",
     "lodash": "4.17.4",
     "eslint": "3.18.0",
-    "eslint-config-airbnb": "14.1.0",
-    "gulp": "^3.9.1",
-    "gulp-eslint": "^3.0.1",
-    "gulp-exclude-gitignore": "^1.1.1",
-    "gulp-istanbul": "^1.1.1",
-    "gulp-line-ending-corrector": "^1.0.1",
-    "gulp-mocha": "^3.0.1",
-    "gulp-nsp": "^2.4.2",
-    "gulp-plumber": "^1.1.0"
+    "eslint-config-airbnb": "14.1.0"
   },
   "repository": "https://github.com/redbabel/loopback-component-model-diagram.git",
   "scripts": {
-    "prepublish": "gulp prepublish",
-    "test": "gulp",
     "lint": "./node_modules/.bin/eslint ."
   },
   "private": false,
