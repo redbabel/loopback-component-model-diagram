@@ -30,6 +30,7 @@
     <ul>
       <li><code>properties</code>: if <code>false</code>, it hides the properties of each node (e.g. <code>properties=false</code>)</li>
       <li><code>hideInherited</code>: if <code>false</code>, it hides inherited properties (e.g. <code>hideInherited=false</code>)</li>
+      <li><code>showEmbeddedRelations</code>: if <code>true</code>, it shows a distinct model for the embeds one and embeds many relations (e.g. <code>showEmbeddedRelations=true</code>)</li>
       <li>any <a href="https://github.com/skanaar/nomnoml/#directives">directive</a> of <a href="http://www.nomnoml.com/">nomnoml</a>        (e.g. <code>arrowSize=2&direction=right&stroke=%23ff0000&fill=%23000</code>).</li>
     </ul>
 
@@ -78,6 +79,8 @@
     <img src="images/embeds-many.png" alt="Embeds many relation" title="Embeds many relation">
     <p>If a customer references many accounts:</p>
     <img src="images/references-many.png" alt="References many relation" title="References many relation">
+    <p>If <code>showEmbeddedRelations</code> is <code>true</code>, new models are shown:</p>
+    <img src="images/show-embeds.png" alt="Embeds relations with showEmbeddedRelations=true" title="Embeds relations with showEmbeddedRelations=true">
     <h3>Inheritance</h3>
     <p>Another useful relation represented, but not defined as a proper relation, is the inheritance. This is determined looking
       up the base model. It's displayed only id the base model is not "Model" or "PersistedModel". For instance, if the base
