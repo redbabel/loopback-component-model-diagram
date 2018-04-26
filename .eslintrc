@@ -1,12 +1,21 @@
 {
   "extends": "airbnb-base",
-  "installedESLint": true,
+  "plugins": [
+    "import"
+  ],
   "env": {
     "mocha": true
   },
   "rules": {
     "no-console": [
       "off"
+    ],
+    "max-len": [
+      "error",
+      140,
+      {
+        "ignoreComments": true
+      }
     ]
   }
 }
